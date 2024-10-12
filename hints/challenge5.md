@@ -24,6 +24,10 @@ You haven't compromised any resource that uses this service account, but luckily
 #####
     gcloud iam service-accounts get-iam-policy <terraform service account>
 
+## Your Goal
+
+**Impersonate the `terraform-pipeline` service account and gain persistent access**
+
 ## Useful commands and tools:
 - list the IAM bindings on project level: `gcloud projects get-iam-policy $PROJECT_ID`
 - list service accounts: `gcloud iam service-accounts list` 
