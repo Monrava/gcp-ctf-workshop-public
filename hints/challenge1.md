@@ -1,9 +1,5 @@
 # Challenge 1: Confidential Cluster
 
-## Your Goal
-
-**Discover the secrets that this cluster has in store for you**
-
 ## Introcution
 
 You received just an IP address as your very first entrypoint into the GCP project.  
@@ -44,6 +40,10 @@ It looks like you have read access to some resources on the default namespace of
 You can also query them by using the Kubernetes API:  
 #####
     curl -k -H "Authorization:Bearer <token>" https://<IP>/api/v1/namespaces/default/...
+
+## Your Goal
+
+**Discover the secrets that this cluster has in store for you.**
 
 ## Useful commands and tools:
 

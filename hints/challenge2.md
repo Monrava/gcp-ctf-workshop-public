@@ -1,4 +1,6 @@
-### Challenge 2: State of affairs
+# Challenge 2: State of affairs
+
+## Introduction
 
 You found credentials for a GCP service account.
 The json blob already provides some useful information. It contains the GCP project ID, the email of the service account (client_e-mail) and the private key of the account.  
@@ -10,17 +12,21 @@ To use the project id in other commands later during this challenge, set it as e
 Save the json blob in a file. You can now also use it as a credential for the gcloud CLI:  
 #####
     gcloud auth activate-service-account --key-file <path-to-file>
-You can check that this worked when running:  
+You can check that this is working when you run:  
 #####
     gcloud auth list
 It now shows the service account as active account.  
 So what can you do with this account? Did you find any hints during challenge 1?  
 Take another look at the response of the Kubernetes API when you listed the secrets.
 
-#### Useful commands and tools:
+## Your Goal
+
+**Gain access to data that will tell you more about the resources in this project**
+
+## Useful commands and tools:
 - gsutil (already installed with gcloud): `gsutil ls gs://<...>`
 
-#### Hints
+## Hints
 <details>
   <summary>Hint 1</summary>
 

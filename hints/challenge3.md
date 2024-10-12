@@ -1,4 +1,6 @@
-### Challenge 3: Computing power
+# Challenge 3: Computing power
+
+## Introcution
 
 The file on the storage bucket is pretty useful for you as attacker.  
 That seems to be the leftovers of a terraform pipeline that someone set up for this GCP project.  
@@ -6,7 +8,15 @@ They deployed parts of the infrastructure with terraform and the terraform state
 
 Would that help you to move on into other infrastructure deployed here?
 
-#### Hints
+## Your Goal
+
+**Gain control over the infrastructure deployed via terraform**
+
+## Useful commands and tools:
+
+- `base64 -d`
+
+## Hints
 <details>
   <summary>Hint 1</summary>
 
