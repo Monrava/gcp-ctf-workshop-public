@@ -1,6 +1,6 @@
 # Challenge 1: Confidential Cluster
 
-## Introcution
+## Introduction
 
 You received just an IP address as your very first entrypoint into the GCP project.  
 The IP belongs to a Google Kubernetes Cluster (GKE) - how can you access the Kubernetes API to learn more about the cluster?
