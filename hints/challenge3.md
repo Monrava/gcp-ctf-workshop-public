@@ -1,6 +1,6 @@
 # Challenge 3: Computing power
 
-## Introcution
+## Introduction
 
 The file on the storage bucket is pretty useful for you as attacker.  
 That seems to be the leftovers of a terraform pipeline that someone set up for this GCP project.  
