@@ -42,7 +42,6 @@ That last access scope looks promising. The access scope `devstorage.read_only` 
 - [GCP oauth access scopes](https://developers.google.com/identity/protocols/oauth2/scopes#storage)
 - `gsutil ls gs://<..>`
 - `gsutil cat gs://<..>`
-- `curl -H "Authorization:Bearer <token>" https://...`
 - [Metadata server](https://cloud.google.com/functions/docs/securing/function-identity#access-tokens)
 
 ## Hints
@@ -52,12 +51,12 @@ That last access scope looks promising. The access scope `devstorage.read_only` 
 
   List all storage buckets in the project. You can run the `gsutil` commands from the compute VM:  
   #####
-      gsutil ls 
+    gsutil ls 
   There is an additional bucket that you couldn't access before. You can list and read the content on this bucket:
   #####
-      gsutil ls gs://cloud-function-bucket-challenge4
+    gsutil ls gs://cloud-function-bucket-challenge4
   #####
-      gsutil cat gs://cloud-function-bucket-challenge4/main.py
+    gsutil cat gs://cloud-function-bucket-challenge4/main.py
   A script on the compute engine can also give you more hints on how to use the new resource you found.
 
 </details>
@@ -76,7 +75,7 @@ That last access scope looks promising. The access scope `devstorage.read_only` 
     
   The script on the compute VM invokes the function. You can modify that request and ask the function to return its access token instead of its service account email:
   #####
-      curl -s -X POST https://europe-west1-$PROJECT_ID.cloudfunctions.net/monitoring-function -H "Authorization: bearer $(gcloud auth print-identity-token)" -H "Content-Type: application/json" -d '{"metadata": "token"}'
+    curl -s -X POST https://$LOCATION-$PROJECT_ID.cloudfunctions.net/monitoring-function -H "Authorization: bearer $(gcloud auth print-identity-token)" -H "Content-Type: application/json" -d '{"metadata": "token"}'
 
 </details>
 

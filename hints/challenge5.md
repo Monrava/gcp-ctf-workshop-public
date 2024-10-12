@@ -49,7 +49,8 @@ You haven't compromised any resource that uses this service account, but luckily
   <summary>Hint 2</summary>
 
   Add your own Google Account to the GCP project by running:  
-    `gcloud projects add-iam-policy-binding $PROJECT_ID --member=user:<your Google account> --role=roles/viewer --impersonate-service-account <terraform pipeline account>`
+  #####
+    gcloud projects add-iam-policy-binding $PROJECT_ID --member=user:<your Google account> --role=roles/viewer --impersonate-service-account <terraform pipeline account>
 
 </details>
 
