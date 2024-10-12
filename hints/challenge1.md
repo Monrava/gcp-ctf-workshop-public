@@ -59,7 +59,7 @@ You can also query them by using the Kubernetes API:
 
   You can read Kubernetes secrets in the default namespace on the cluster. Which secrets might it hold?  
   #####
-      curl -k -H "Authorization:Bearer $TOKEN" https://$IP/api/v1/namespaces/default/secrets
+    curl -k -H "Authorization:Bearer $TOKEN" https://$IP/api/v1/namespaces/default/secrets
 
 </details>
 
@@ -68,6 +68,6 @@ You can also query them by using the Kubernetes API:
 
   The secret values are base64 encoded. Decode them to read the value:  
   #####
-      echo -n <secret-value> | base64 -d  
+    echo -n <secret-value> | base64 -d  
 
 </details>

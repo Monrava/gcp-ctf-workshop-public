@@ -43,6 +43,6 @@ Would that help you to move on into other infrastructure deployed here?
   Save the SSH private key that you find in the terraform state in a file.  
   You'll also find the IP address of the compute instance in the parameter "nat_ip". The "metadata" parameter tells you that a user named "alice" has SSH access to this instance.  
   #####
-      ssh -i <private key file> alice@<compute instance IP> 
+    ssh -i <private key file> alice@<compute instance IP> 
 
 </details>
