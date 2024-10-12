@@ -1,4 +1,4 @@
-# CTF Guide
+# A hitchhiker's guide to a Google Cloud CTF
 
 ## Your Goal
 
