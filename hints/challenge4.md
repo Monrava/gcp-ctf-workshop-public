@@ -1,6 +1,6 @@
 # Challenge 4: Invoking answers
 
-## Introcution
+## Introduction
 
 You can control a compute instance in the project! Let's find out which permissions this instance has in GCP.  
 Your compute instance has a GCP service account assigned to it, allowing it to interact with the GCP APIs.  
@@ -8,7 +8,7 @@ Check which service account this instance uses and what this account can do.
 #####
     gcloud auth list
 
-> [!NOTE]  
+> **Background Info:**  
 > Resources such as compute VMs use the Google metadata server endpoint to get an access token for their assigned service account.  
 > As you now have access to the compute VM, you could also query the metadata server and retrieve information such as the VMs service account or its access token. For example you can use this endpoint to get information about the VMs service account:  
 > #####
@@ -80,4 +80,4 @@ That last access scope looks promising. The access scope `devstorage.read_only` 
 
 ## First stage of compromise achieved!
 
-When you completed the challenge read [here](../extras/first-stage-compromise.md) what your new access token can do.
+When you completed the challenge read [here](../extras/first-stage-compromised.md) what your new access token can do.
