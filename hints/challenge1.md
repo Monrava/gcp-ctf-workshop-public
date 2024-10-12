@@ -1,7 +1,14 @@
-### Challenge 1: Confidential Cluster
+# Challenge 1: Confidential Cluster
+
+## Your Goal
+
+**Discover the secrets that this cluster has in store for you**
+
+## Introcution
 
 You received just an IP address as your very first entrypoint into the GCP project.  
 The IP belongs to a Google Kubernetes Cluster (GKE) - how can you access the Kubernetes API to learn more about the cluster?
+
 
 To simplify your next commands, set the IP address as an environment variable:  
 #####
@@ -15,7 +22,7 @@ As you are not authenticated, you are part of the group `system:anonymous` and y
 Most endpoints will respond with 403 permission denied.  
 
 But what if you were in `system:authenticated`? 
-Try to get a token for your own Google account using the OAuth playground (select scope "Kubernetes Engine API v1").  
+Try to get a token for your own Google account using the [OAuth playground](https://developers.google.com/oauthplayground/) (select scope "Kubernetes Engine API v1").  
 
 Set your token as environment variable to make the next commands easier to use.  
 #####
@@ -27,7 +34,7 @@ Send a request with your token to the Kubernetes API:
 
 Just by supplying any Google access token you will be able to access the endpoint!  
 
-Once you have obtained access and can read from the Kubernetes API - what API resources can you query?
+Once you have gained access and can read from the Kubernetes API - which API resources can you query?
 
 You can find out which permissions 'system:authenticated' has on this cluster with a request to this endpoint:  
 #####
@@ -38,14 +45,14 @@ You can also query them by using the Kubernetes API:
 #####
     curl -k -H "Authorization:Bearer <token>" https://<IP>/api/v1/namespaces/default/...
 
-#### Useful commands and tools:
+## Useful commands and tools:
 
 - `curl -k https://<IP>`
 - `curl -k -H "Authorization:Bearer <token>" https://<IP>/api/v1/namespaces/default/...`
 - [Google OAuth Playground](https://developers.google.com/oauthplayground/)
 - Learn more about this misconfiguration [here](https://orca.security/resources/blog/sys-all-google-kubernetes-engine-risk)
 
-#### Hints
+## Hints
 
 <details>
   <summary>Hint 1</summary>
