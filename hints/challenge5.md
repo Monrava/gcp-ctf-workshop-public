@@ -1,10 +1,14 @@
-### Bonus Challenge 5: Admin Impersonation
+# Bonus Challenge 5: Admin Impersonation
+
+## Introduction
+
 There is one last level of control you can achieve - gaining persistent access!  
 Wouldn't it be nice if you could add your own Google account to this project?  
 You can try to set an IAM binding on the project level. But while the compute account you compromised is powerful, it can't modify the IAM settings on the project.  
 But maybe another service account can?  
 
-Note: In this CTF challenge the only role you can grant your own Google account on the project level is "role/viewer".  
+> [!NOTE]
+> In this CTF challenge the only role you can grant your own Google account on the project level is "role/viewer".  
 
 List the other service accounts on this project:
 #####
@@ -20,13 +24,13 @@ You haven't compromised any resource that uses this service account, but luckily
 #####
     gcloud iam service-accounts get-iam-policy <terraform service account>
 
-#### Useful commands and tools:
+## Useful commands and tools:
 - list the IAM bindings on project level: `gcloud projects get-iam-policy $PROJECT_ID`
 - list service accounts: `gcloud iam service-accounts list` 
 - get IAM bindings showing who can control this service account: `gcloud iam service-accounts get-iam-policy <service account>`
 - the [ServiceAccountTokenCreator role](https://cloud.google.com/iam/docs/service-account-permissions#token-creator-role)
 
-#### Hints
+## Hints
 
 <details>
   <summary>Hint 1</summary>
@@ -45,7 +49,9 @@ You haven't compromised any resource that uses this service account, but luckily
 
 </details>
 
+## GCP Project Takeover!
+
 When you complete the bonus challenge, you should be able to access this project in the cloud console in your browser.  
 Log in with the Google account you just added.  
 
-You finished the challenge and pwnd the vulnerable Google Cloud Project!
+**You finished the challenge and pwnd the vulnerable Google Cloud Project!**

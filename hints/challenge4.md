@@ -8,6 +8,7 @@ Check which service account this instance uses and what this account can do.
 #####
     gcloud auth list
 
+
 > **Background Info:**  
 > Resources such as compute VMs use the Google metadata server endpoint to get an access token for their assigned service account.  
 > As you now have access to the compute VM, you could also query the metadata server and retrieve information such as the VMs service account or its access token. For example you can use this endpoint to get information about the VMs service account:  
@@ -15,6 +16,7 @@ Check which service account this instance uses and what this account can do.
 >     curl "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/" -H "Metadata-Flavor: Google"
 > 
 > As the compute instance has gcloud installed, using `gcloud auth list` or `gcloud auth print-access-token` is more convenient though.  
+
 
 The service account of this compute engine is the default compute service account: `<project-nr>-compute@developer.gserviceaccount.com`.  
 A very powerful account in GCP! By default, it has the "Editor" role on a GCP project! But before getting too excited ... try using some of your new powers:  
