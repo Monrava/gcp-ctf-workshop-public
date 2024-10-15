@@ -10,6 +10,10 @@ But maybe another service account can?
 > [!NOTE]
 > In this CTF challenge the only role you can grant your own Google account on the project level is "role/viewer".  
 
+You can tell gcloud to use your new powerful token by setting it as environment variable:  
+#####
+     export CLOUDSDK_AUTH_ACCESS_TOKEN=<function token>
+
 List the other service accounts on this project:
 #####
     gcloud iam service-accounts list
@@ -49,13 +53,13 @@ You haven't compromised any resource that uses this service account, but luckily
   <summary>Hint 2</summary>
 
   Add your own Google Account to the GCP project by running:  
-    `gcloud projects add-iam-policy-binding $PROJECT_ID --member=user:<your Google account> --role=roles/viewer --impersonate-service-account <terraform pipeline account>`
+  #####
+    gcloud projects add-iam-policy-binding $PROJECT_ID --member=user:<your Google account> --role=roles/viewer --impersonate-service-account <terraform pipeline account>
 
 </details>
 
 ## GCP Project Takeover!
 
-When you complete the bonus challenge, you should be able to access this project in the cloud console in your browser.  
-Log in with the Google account you just added.  
+When you complete the bonus challenge, you should be able to access this project in the [cloud console](https://console.cloud.google.com/) in your browser.  
 
 **You finished the challenge and pwnd the vulnerable Google Cloud Project!**

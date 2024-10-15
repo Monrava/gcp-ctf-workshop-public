@@ -39,7 +39,7 @@ You can find out which permissions 'system:authenticated' has on this cluster wi
 It looks like you have read access to some resources on the default namespace of the cluster.  
 You can also query them by using the Kubernetes API:  
 #####
-    curl -k -H "Authorization:Bearer <token>" https://<IP>/api/v1/namespaces/default/...
+    curl -k -H "Authorization:Bearer <token>" https://$IP/api/v1/namespaces/default/...
 
 ## Your Goal
 
@@ -47,8 +47,8 @@ You can also query them by using the Kubernetes API:
 
 ## Useful commands and tools:
 
-- `curl -k https://<IP>`
-- `curl -k -H "Authorization:Bearer <token>" https://<IP>/api/v1/namespaces/default/...`
+- `curl -k https://$IP`
+- `curl -k -H "Authorization:Bearer <token>" https://$IP/api/v1/namespaces/default/...`
 - [Google OAuth Playground](https://developers.google.com/oauthplayground/)
 - Learn more about this misconfiguration [here](https://orca.security/resources/blog/sys-all-google-kubernetes-engine-risk)
 
