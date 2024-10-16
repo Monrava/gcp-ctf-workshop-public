@@ -6,6 +6,8 @@ Your goal of this CTF is to exploit a vulnerable GCP project and find up to 5 fl
 During the challenge you will be able to move through the environment and step by step escalate your privileges until you manage the IAM bindings on the project, essentially allowing you to gain control of all resources in the project.
 (In our CTF workshop setup, we have to keep you in check a bit and you will only be able to manage specific IAM bindings.)
 
+For this challenge we'll use the following public [Google Slides presentation](https://docs.google.com/presentation/d/17oNmnPElP2IHuHUVgGQcQQMH3bSHtQ5YdN9NAqPM1ow/edit?usp=sharing).
+
 ## Prerequisites
 
 To play this CTF and participate in our workshop you will need:
