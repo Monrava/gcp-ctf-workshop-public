@@ -20,13 +20,16 @@ To play this CTF and participate in our workshop you will need:
 The cloud services in the project might be misconfigured or leak information that can be useful for you as an attacker.
 You'll start out with just an IP address as your first piece of information.
 
+> [!NOTE]
+> IP address to start with: 34.139.3.217
+
 We are providing you with useful hints and commands for each challenge.
 Don't hesitate to use them, as you will have limited time for this CTF during our workshop.
 
 ## Challenges
 
-- [Challenge 1](hints/challenge1.md)
-- [Challenge 2](hints/challenge2.md)
-- [Challenge 3](hints/challenge3.md)
-- [Challenge 4](hints/challenge4.md)
-- [Bonus Challenge 5](hints/challenge5.md)
+- [Challenge 1](docs/challenge1.md)
+- [Challenge 2](docs/challenge2.md)
+- [Challenge 3](docs/challenge3.md)
+- [Challenge 4](docs/challenge4.md)
+- [Bonus Challenge 5](docs/challenge5.md)
