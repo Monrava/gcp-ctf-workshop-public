@@ -21,7 +21,7 @@ The cloud services in the project might be misconfigured or leak information tha
 You'll start out with just an IP address as your first piece of information.
 
 > [!NOTE]
-> IP address to start with: 34.139.3.217
+> IP address to start with: `34.139.3.217`
 
 We are providing you with useful hints and commands for each challenge.
 Don't hesitate to use them, as you will have limited time for this CTF during our workshop.
