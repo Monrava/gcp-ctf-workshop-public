@@ -14,6 +14,10 @@ You can tell gcloud to use your new powerful token by setting it as environment 
 #####
      export CLOUDSDK_AUTH_ACCESS_TOKEN=<function token>
 
+List IAM bindings on the GCP project:
+#####
+    gcloud projects get-iam-policy $PROJECT_ID
+
 List the other service accounts on this project:
 #####
     gcloud iam service-accounts list

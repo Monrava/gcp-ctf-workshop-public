@@ -2,6 +2,9 @@
 
 ## Introduction
 
+> [!NOTE]
+> IP address to start with: `34.139.3.217`
+
 You received just an IP address as your very first entrypoint into the GCP project.  
 The IP belongs to a Google Kubernetes Cluster (GKE) - how can you access the Kubernetes API to learn more about the cluster?
 
@@ -37,9 +40,9 @@ You can find out which permissions 'system:authenticated' has on this cluster wi
     curl -k -X POST -H "Content-Type: application/json" -d '{"apiVersion":"authorization.k8s.io/v1", "kind":"SelfSubjectRulesReview", "spec":{"namespace":"default"}}' -H "Authorization:Bearer $TOKEN" https://$IP/apis/authorization.k8s.io/v1/selfsubjectrulesreviews
 
 It looks like you have read access to some resources on the default namespace of the cluster.  
-You can also query them by using the Kubernetes API:  
+You can also query them by using the Kubernetes API - for example:  
 #####
-    curl -k -H "Authorization:Bearer <token>" https://$IP/api/v1/namespaces/default/...
+    curl -k -H "Authorization:Bearer $TOKEN" https://$IP/api/v1/namespaces/default/pods
 
 ## Your Goal
 
@@ -48,7 +51,7 @@ You can also query them by using the Kubernetes API:
 ## Useful commands and tools:
 
 - `curl -k https://$IP`
-- `curl -k -H "Authorization:Bearer <token>" https://$IP/api/v1/namespaces/default/...`
+- `curl -k -H "Authorization:Bearer $TOKEN" https://$IP/api/v1/namespaces/default/...`
 - [Google OAuth Playground](https://developers.google.com/oauthplayground/)
 - Learn more about this misconfiguration [here](https://orca.security/resources/blog/sys-all-google-kubernetes-engine-risk)
 
