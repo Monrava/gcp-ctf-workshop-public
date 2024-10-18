@@ -64,7 +64,7 @@ You can also query them by using the Kubernetes API - for example:
   <summary>Hint 1</summary>
 
   The introduction contains a command to list pods on the cluster. You can use a similar endpoint to list other resources.  
-  
+
   If you are using kubectl: You might have more success when viewing the response in json format: `... -o json`
 
 </details>
@@ -83,7 +83,7 @@ You can also query them by using the Kubernetes API - for example:
 </details>
 
 <details>
-  <summary>Hint 2</summary>
+  <summary>Hint 3</summary>
 
   The secret values are base64 encoded. Decode them to read the value:  
   #####
