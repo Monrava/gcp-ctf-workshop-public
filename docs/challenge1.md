@@ -63,7 +63,8 @@ You can also query them by using the Kubernetes API - for example:
 <details>
   <summary>Hint 1</summary>
 
-  The introduction contains a command to list pods on the cluster. You can use a similar endpoint to list other resources.
+  The introduction contains a command to list pods on the cluster. You can use a similar endpoint to list other resources.  
+  
   If you are using kubectl: You might have more success when viewing the response in json format: `... -o json`
 
 </details>
