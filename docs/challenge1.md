@@ -35,6 +35,9 @@ Just by supplying any Google access token you will be able to access the endpoin
 
 Once you have gained access and can read from the Kubernetes API - which API resources can you query?
 
+> [!TIP]
+> Optional: You can configure kubectl to access the cluster. For instructions see [kubectl_instructions](../extras/kubectl_instructions.md)
+
 You can find out which permissions 'system:authenticated' has on this cluster with a request to this endpoint:  
 #####
     curl -k -X POST -H "Content-Type: application/json" -d '{"apiVersion":"authorization.k8s.io/v1", "kind":"SelfSubjectRulesReview", "spec":{"namespace":"default"}}' -H "Authorization:Bearer $TOKEN" https://$IP/apis/authorization.k8s.io/v1/selfsubjectrulesreviews
@@ -60,14 +63,27 @@ You can also query them by using the Kubernetes API - for example:
 <details>
   <summary>Hint 1</summary>
 
-  You can read Kubernetes secrets in the default namespace on the cluster. Which secrets might it hold?  
-  #####
-      curl -k -H "Authorization:Bearer $TOKEN" https://$IP/api/v1/namespaces/default/secrets
+  The introduction contains a command to list pods on the cluster. You can use a similar endpoint to list other resources.  
+
+  If you are using kubectl: You might have more success when viewing the response in json format: `... -o json`
 
 </details>
 
 <details>
   <summary>Hint 2</summary>
+
+  You can read Kubernetes secrets in the default namespace on the cluster. Which secrets might it hold?  
+  #####
+    curl -k -H "Authorization:Bearer $TOKEN" https://$IP/api/v1/namespaces/default/secrets
+  Or when using kubectl:
+  #####
+    kubectl get secrets -o json
+     
+
+</details>
+
+<details>
+  <summary>Hint 3</summary>
 
   The secret values are base64 encoded. Decode them to read the value:  
   #####
