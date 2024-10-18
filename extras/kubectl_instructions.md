@@ -1,6 +1,6 @@
 # Using kubectl for challenge 1
 
-1. Create a config file:
+1. Create a config file and add the cluster IP and your token:
 
 #####
     apiVersion: v1
