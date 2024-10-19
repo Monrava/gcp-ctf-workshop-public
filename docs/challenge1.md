@@ -3,7 +3,7 @@
 ## Introduction
 
 > [!NOTE]
-> IP address to start with: `34.139.3.217`
+> IP address to start with: `34.23.127.178`
 
 You received just an IP address as your very first entrypoint into the GCP project.  
 The IP belongs to a Google Kubernetes Cluster (GKE) - how can you access the Kubernetes API to learn more about the cluster?
