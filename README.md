@@ -2,13 +2,16 @@
 
 # A hitchhiker's guide to a Google Cloud CTF
 
+:warning: **This repository contains only the hints and instructions for the challenge.**:warning: 
+
+:warning: **For the full Terraform setup and solutions - visit this [repository](https://github.com/n0jam/gcp-ctf-workshop)** :warning: 
+
+
 ## Your Goal
 
 Your goal of this CTF is to exploit a vulnerable GCP project and find up to 5 flags.
 During the challenge you will be able to move through the environment and step by step escalate your privileges until you manage the IAM bindings on the project, essentially allowing you to gain control of all resources in the project.
 (In our CTF workshop setup, we have to keep you in check a bit and you will only be able to manage specific IAM bindings.)
-
-For this challenge we'll use the following public [Google Slides presentation](https://docs.google.com/presentation/d/17oNmnPElP2IHuHUVgGQcQQMH3bSHtQ5YdN9NAqPM1ow/edit?usp=sharing).
 
 ## Prerequisites
 
